@@ -9,10 +9,20 @@
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" name="title" class="form-control" id="title">
+                        <% if( errors.title != '' ){ %>
+                        <div id="titleError" class="invalid-feedback d-block">
+                            Please enter a title here.
+                        </div>
+                        <% } %>
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
                         <input type="text" name="description" class="form-control" id="description">
+                        <% if( errors.description != '' ){ %>
+                        <div id="descriptionError" class="invalid-feedback d-block">
+                            Please enter a description here.
+                        </div>
+                        <% } %>
                     </div>
                     <button type="submit" class="btn btn-primary">Add</button>
                 </form>
